@@ -1,0 +1,15 @@
+{
+     "main": {
+          "home": "Home",
+          "about": "About",
+          "accountBtn": "Account",
+          "loggedIn": "Dashboard"
+     },
+     "dashboard": {
+          "home": "Dashboard",
+          "profile": "Profile",
+          "billing": "Billing",
+          "settings": "Account Settings"
+     },
+     "logoutBtn": "Logout"
+}

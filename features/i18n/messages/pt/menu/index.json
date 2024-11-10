@@ -1,0 +1,15 @@
+{
+     "main": {
+          "home": "Lar",
+          "about": "Sobre",
+          "accountBtn": "Conta",
+          "loggedIn": "Painel"
+     },
+     "dashboard": {
+          "home": "Painel",
+          "profile": "Perfil",
+          "billing": "Cobrança",
+          "settings": "Configurações de Conta"
+     },
+     "logoutBtn": "Sair"
+}

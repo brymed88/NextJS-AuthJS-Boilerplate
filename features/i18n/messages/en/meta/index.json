@@ -1,0 +1,27 @@
+{
+     "home": {
+          "title": "Home Page",
+          "description": "This is the home page",
+          "keywords": "home,homepage,my home"
+     },
+     "about": {
+          "title": "About Page",
+          "description": "This is the about page",
+          "keywords": "about,aboutmy"
+     },
+     "auth": {
+          "title": "Auth Page",
+          "description": "This is the auth page for user authentication",
+          "keywords": "auth, authentication, account"
+     },
+     "dashboard": {
+          "title": "Dashboard Page",
+          "description": "This is the dashboard page post login",
+          "keywords": ""
+     },
+     "terms": {
+          "title": "Terms & Conditions",
+          "description": "Terms and Conditions",
+          "keywords": ""
+     }
+}
