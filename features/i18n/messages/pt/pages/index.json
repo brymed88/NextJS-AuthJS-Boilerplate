@@ -31,9 +31,6 @@
           },
           "login": {
                "providerH2": "Faça login com o provedor",
-               "providerDiscord": "Faça login com Discord",
-               "providerGoogle": "Faça login com o Google",
-               "providerLinkedIn": "Faça login com o LinkedIn",
                "credentialsH2": "Faça login com credenciais",
                "emailAddressLabel": "Endereço de email",
                "passwordLabel": "Senha",

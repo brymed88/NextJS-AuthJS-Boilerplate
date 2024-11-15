@@ -41,9 +41,16 @@ Note: If you do not have a domain to link then use the test from address
 
 ### Setup your database
 
-Project is shown using a mysql database. Changing prisma adapter to PostGreSQL may require additional changes within project
+Project is shown using a PostgreSQL database. Changing prisma adapter to any other type may require additional changes within project
 
-[How to install Mysql](https://dev.mysql.com/doc/mysql-getting-started/en/)
+For convenience, a docker compose file is supplied with PostgreSQL configured. Feel free to modify and or discard if this does not apply to you.
+
+If you would like to use the docker file for local development / demo.. Please make sure docker is installed on your system [Docker Installation Instructions](https://docs.docker.com/desktop)
+
+```
+cd your-path/NextJS-AuthJS-Boilerplate/
+docker-compose up -d -f postgres.compose.yml
+```
 
 ### Update both .env.development & .env.production files
 

@@ -1,5 +1,6 @@
 'use client'
 
+import { providerMap } from '@/auth'
 import Button from '@/components/atoms/button'
 import HookFormComponent from '@/components/atoms/hookForm'
 import HookFormInput from '@/components/atoms/hookFormInput'
@@ -7,10 +8,11 @@ import Label from '@/components/atoms/label'
 import { signIn } from '@/features/auth/actions/sign-in'
 import { Link, useRouter } from '@/features/i18n/routing'
 import { Handshake } from 'lucide-react'
+import { signIn as AuthSignIn } from 'next-auth/react'
 import { useTranslations } from 'next-intl'
+import Image from 'next/image'
 import { useTransition } from 'react'
 import { z } from 'zod'
-
 const LoginSchema = z.object({
      email: z.string().email({ message: 'fieldRequired' }),
      password: z.string().min(1, { message: 'fieldRequired' }),
@@ -38,13 +40,33 @@ const LoginStep = () => {
           })
 
      return (
-          <div className="relative flex w-full flex-col items-center gap-6">
+          <div className="relative flex w-full flex-col items-center gap-3">
                <Handshake size={45} className="stroke-blue-400" />
 
                <span className="w-10/12 border-b border-slate-200 py-1" />
 
                <div className="flex w-11/12 flex-col items-center gap-2">
-                    <h2 className="w-full text-center text-lg text-slate-500">
+                    <h2 className="w-full pb-2 text-center text-lg text-slate-500">
+                         {t('providerH2')}
+                    </h2>
+                    {providerMap.map((provider) => (
+                         <Button
+                              key={provider.id}
+                              onClick={() => AuthSignIn(provider.id)}
+                              className="flex min-w-60 items-center gap-4 bg-slate-100 font-semibold text-slate-800"
+                         >
+                              <Image
+                                   src={`/icons/${provider.id}-icon.svg`}
+                                   height={40}
+                                   width={40}
+                                   alt={`${provider.id} OAuth icon`}
+                              />
+                              <span>{provider.name}</span>
+                         </Button>
+                    ))}
+                    <span className="w-10/12 border-b border-slate-200 py-2" />
+
+                    <h2 className="w-full pt-1 text-center text-lg text-slate-500">
                          {t('credentialsH2')}
                     </h2>
                     <HookFormComponent

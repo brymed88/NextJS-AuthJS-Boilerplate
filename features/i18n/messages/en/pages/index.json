@@ -31,9 +31,6 @@
           },
           "login": {
                "providerH2": "Login with provider",
-               "providerDiscord": "Sign in with Discord",
-               "providerGoogle": "Sign in with Google",
-               "providerLinkedIn": "Sign in with LinkedIn",
                "credentialsH2": "Login with credentials",
                "emailAddressLabel": "Email address",
                "passwordLabel": "Password",
